@@ -4,6 +4,9 @@ class HomeController < ApplicationController
       format.html
       format.pdf { render pdf: "contents" }
     end
+  end
 
+  def method_2
+    render pdf: "contents", template: "home/index"
   end
 end
